@@ -1,0 +1,12 @@
+# root-folder/.htaccess
+
+# Disable directory listing
+Options -Indexes
+
+# Enable mod_rewrite
+RewriteEngine On
+
+# Redirect everything to index.php
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]
+

@@ -1,0 +1,12 @@
+# Block access to all files in this directory if accessed directly by a browser
+RewriteEngine On
+
+Options -Indexes
+
+# # Allow access if the referer is the specified page (invoice.html)
+# RewriteCond %{HTTP_REFERER} ^https?://(www\.)?shifttransittoronto\.ca/demo/InvoiceLines\.html$ [NC,OR]
+
+# # Allow access if there is no referer (e.g., server-side scripts)
+# RewriteCond %{HTTP_REFERER} ^$
+# # Block all other access
+# RewriteRule .* - [F]

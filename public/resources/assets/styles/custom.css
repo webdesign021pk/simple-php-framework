@@ -1,0 +1,104 @@
+/* General */
+label {
+    text-transform: capitalize;
+}
+
+form .inline-checkbox-width {
+    width: 150px !important;
+}
+
+/* .fixed-width-80 {
+} */
+
+.fixed-width-100 {
+    width: 100px !important;
+}
+.fixed-width-200 {
+    width: 200px !important;
+}
+.fixed-width-250 {
+    width: 250px !important;
+}
+
+.min-width-100 {
+    min-width: 100px !important;
+}
+
+.min-width-200 {
+    min-width: 200px !important;
+}
+
+.min-width-250 {
+    min-width: 250px !important;
+}
+
+/* Navbar */
+.nav-pills .nav-link {
+    border-radius: 0 !important;
+    padding: .2rem .1rem !important;
+    margin: 0 .9rem !important;
+    /* border-top: 3px solid #888; */
+    /* color: #000 !important; */
+    /* padding: .2rem .7rem !important; */
+    /* border-bottom: 1px solid #888 !important; */
+}
+
+/* Datatable */
+button.dt-button, div.dt-button, a.dt-button, input.dt-button {
+    padding: .2rem ;
+}
+
+.dataTables_length {
+    padding-left: 0.5rem;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 0.5rem;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: .2rem;
+}
+
+.ul-ps-1 > ul {
+    padding-left: 0.2rem;
+}
+
+/* Print & Export */
+@media print {
+
+    /* Prevent page breaks inside important elements */
+    .no-page-break {
+        page-break-inside: avoid;
+    }
+
+    /* Hide unnecessary elements (e.g., buttons) */
+    .no-print {
+        display: none !important;
+    }
+
+    @page {
+        margin-bottom: 30px;
+
+        /* @bottom-left {
+            content: "The Leader in Mobility Services & Fleet Management ";
+            font-size: 12px;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+        } */
+
+        /* @bottom-right {
+            content: "Page " counter(page) " of " counter(pages);
+            font-size: 12px;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+        } */
+    }
+
+    body {
+        padding-bottom: 60px;
+        font-size: 11px !important;
+    }
+}

@@ -1,0 +1,8 @@
+# project-root/requests/.htaccess
+Options -Indexes
+RewriteEngine On
+
+# Handle front controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ api.php?route=/$1 [QSA,L]
