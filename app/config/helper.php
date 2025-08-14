@@ -165,20 +165,20 @@ function base_url($path = '')
 // php get/post/put/patch/delete request short-hand
 function request_url($path = '')
 {
-    $baseUrl = BASE_URL . '/requests'; // Base URL set in constants.php
+    $baseUrl = REQUEST_URL . ''; // Base URL set in constants.php
     $path = trim($path, '/');
     return $baseUrl . ($path ? "/$path" : '');
 }
 
-// this function is used in navigiation bar
-function is_current_page($expected_page): string
+// this function is used in navigiation bar to highlight current page
+function is_current_path(string $path): string
 {
-    if ($_SERVER['PHP_SELF'] == PROJECT_ROOT . '/' . $expected_page) {
-        // return 'border-top border-3 border-primary';
-        return 'border-bottom border-3 border-primary';
-    } else {
-        return 'not-active';
-    }
+    $base = rtrim(FOLDER_ON_DOMAIN, '/');     // remove trailing slash
+    $path = '/' . ltrim($path, '/');      // ensure exactly one slash at start
+
+    $currentPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+    return ($currentPath === $base . $path) ? 'link-active' : '';
 }
 
 // redirect

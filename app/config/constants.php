@@ -34,9 +34,13 @@ if (php_sapi_name() !== 'cli' && basename($_SERVER['SCRIPT_FILENAME']) === basen
 
 /** Global Constants *********************************************************************************** */
 
-define('FOLDER_ON_DOMAIN', '/simple-php-framework'); // Current folder on domain - if project is hosted on mydomain.abc/project-name then this will be '/project-name'
+define('FOLDER_ON_DOMAIN', '/simple-php-framework/public'); // Current folder on domain - if project is hosted on mydomain.abc/project-name then this will be '/project-name'
 
-define('APP_NAME', 'Simple PHP Framework'); // Determine the current page name - example: index.php or about.php or contact.php
+define('PUBLIC_FOLDER', '/simple-php-framework/public'); // Current folder on domain - if project is hosted on mydomain.abc/project-name then this will be '/project-name'
+
+define('REQUESTS_FOLDER', '/simple-php-framework/requests'); // Current folder on domain - if project is hosted on mydomain.abc/project-name then this will be '/project-name'
+
+define('APP_NAME', 'simple-php-framework'); // Determine the current page name - example: index.php or about.php or contact.php
 
 /** **************************************************************************************************** */
 
@@ -65,7 +69,9 @@ define('DOMAIN', $_SERVER['HTTP_HOST'] ?? 'localhost'); // Current domain name
 
 define('PROTOCOL', (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://'); // Current protocol - http or https
 
-define('BASE_URL', PROTOCOL . DOMAIN . FOLDER_ON_DOMAIN); // Base URL - http://mydomain.abc/project-name or https://mydomain.abc/project-name - This will be use throughout the application
+define('BASE_URL', PROTOCOL . DOMAIN . PUBLIC_FOLDER); // Base URL - http://mydomain.abc/project-name or https://mydomain.abc/project-name - This will be use throughout the application
+
+define('REQUEST_URL', PROTOCOL . DOMAIN . REQUESTS_FOLDER); // Base URL - http://mydomain.abc/project-name or https://mydomain.abc/project-name - This will be use throughout the application
 
 define('CURRENT_PAGE', basename($_SERVER['PHP_SELF'])); // Determine the current page name - example: index.php or about.php or contact.php
 

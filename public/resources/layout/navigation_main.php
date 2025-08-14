@@ -11,12 +11,12 @@
 
                 <ul class="nav nav-pills">
                     <li class="nav-item text-light">
-                        <a href="<?= base_url() ?>" class="nav-link <?= is_current_page('index.php') ?>" aria-current="page">
+                        <a href="<?= base_url() ?>" class="nav-link <?= is_current_path('index.php') ?>" aria-current="page">
                             Home
                         </a>
                     </li>
                     <li class="nav-item text-light">
-                        <a href="<?= base_url('about.php') ?>" class="nav-link <?= is_current_page('about.php') ?>" aria-current="page">
+                        <a href="<?= base_url('about.php') ?>" class="nav-link <?= is_current_path('about.php') ?>" aria-current="page">
                             About
                         </a>
                     </li>
@@ -30,7 +30,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item <?= is_current_page('users/index.php') ?>" href="<?= base_url('users/index.php') ?>">
+                                    <a class="dropdown-item <?= is_current_path('users/index.php') ?>" href="<?= base_url('users/index.php') ?>">
                                         List
                                     </a>
                                 </li>
@@ -38,7 +38,7 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li>
-                                    <a class="dropdown-item <?= is_current_page('users/create.php') ?>" href="<?= base_url('users/create.php') ?>">
+                                    <a class="dropdown-item <?= is_current_path('users/create.php') ?>" href="<?= base_url('users/create.php') ?>">
                                         Add New
                                     </a>
                                 </li>
